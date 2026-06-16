@@ -4,9 +4,7 @@ export async function GET(req: NextRequest) {
   const code = req.nextUrl.searchParams.get("code");
 
   if (!code) {
-    return new NextResponse("Missing code", {
-      status: 400,
-    });
+    return new NextResponse("Missing code", { status: 400 });
   }
 
   const tokenResponse = await fetch(
@@ -26,17 +24,28 @@ export async function GET(req: NextRequest) {
 
   const tokenData = await tokenResponse.json();
 
-  return new NextResponse(`
-    <script>
-      window.opener.postMessage(
-        'authorization:github:success:${tokenData.access_token}',
-        '*'
-      );
-      window.close();
-    </script>
-  `, {
-    headers: {
-      "Content-Type": "text/html",
-    },
-  });
+  return new NextResponse(
+    `
+    <!DOCTYPE html>
+    <html>
+      <body>
+        <script>
+          window.opener.postMessage(
+            'authorization:github:success:${JSON.stringify({
+              token: tokenData.access_token,
+              provider: "github"
+            })}',
+            window.location.origin
+          );
+          window.close();
+        </script>
+      </body>
+    </html>
+    `,
+    {
+      headers: {
+        "Content-Type": "text/html",
+      },
+    }
+  );
 }
