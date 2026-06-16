@@ -24,6 +24,8 @@ export async function GET(req: NextRequest) {
 
   const tokenData = await tokenResponse.json();
 
+  console.log("Token data:", tokenData);
+
   return new NextResponse(
     `
     <!DOCTYPE html>
