@@ -1,0 +1,43 @@
+---
+title: "Lumen UI"
+summary: "An open-source collection of headless, animated React components with first-class accessibility."
+category: "Open Source"
+tags: ["React", "Animation", "Accessibility", "Open Source"]
+stack: ["React", "TypeScript", "Framer Motion", "Radix UI"]
+role: "Creator & Maintainer"
+year: 2022
+featured: false
+order: 5
+status: "In Progress"
+cover: "/projects/lumen-ui.png"
+links:
+  repo: "https://github.com/akshayxemo"
+  live: "https://github.com/akshayxemo"
+---
+
+Lumen is a small, focused set of React components that pair tasteful motion with rigorous accessibility — the kind of polish that's easy to skip and hard to retrofit.
+
+## Philosophy
+
+Motion should clarify, not decorate. Every animation in Lumen respects `prefers-reduced-motion` and degrades to an instant state transition.
+
+```tsx title="usage.tsx"
+import { Disclosure } from "@lumen/ui"
+
+export function FAQ() {
+  return (
+    <Disclosure>
+      <Disclosure.Trigger>What is Lumen?</Disclosure.Trigger>
+      <Disclosure.Panel>A headless, animated component kit.</Disclosure.Panel>
+    </Disclosure>
+  )
+}
+```
+
+<Callout>
+  Components are headless by default — you bring the styles. That keeps the library tiny and lets it slot into any design system.
+</Callout>
+
+## Status
+
+Lumen is actively maintained and growing component by component, with a focus on quality over breadth.

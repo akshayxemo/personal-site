@@ -1,0 +1,48 @@
+---
+title: "Migrating a Large App to the Next.js App Router"
+summary: "A pragmatic, incremental playbook for moving a production codebase to the App Router without a big-bang rewrite."
+date: "2025-02-18"
+tags: ["Next.js", "React", "Architecture"]
+featured: true
+cover: "/articles/migrating-to-the-app-router.png"
+---
+
+Migrating a mature application to the App Router is less about new APIs and more about a new mental model. Here's the approach that worked for a 200k-line codebase without a single freeze week.
+
+## Start with the boundary, not the leaves
+
+The temptation is to convert pages one by one. Instead, define the boundary between server and client components first. Most of your tree wants to be a Server Component; only the interactive islands need `"use client"`.
+
+```tsx title="app/dashboard/page.tsx"
+import { getMetrics } from "@/lib/metrics"
+import { MetricsChart } from "./metrics-chart"
+
+export default async function DashboardPage() {
+  const metrics = await getMetrics()
+  return <MetricsChart data={metrics} />
+}
+```
+
+## Move data fetching down and out of effects
+
+The single biggest win is deleting `useEffect`-based fetching. Data fetched on the server arrives in the first paint, no spinner required.
+
+<Callout type="tip">
+  Keep a running list of every `useEffect` that fetches. Each one you delete is a network waterfall removed and a loading state you no longer have to design.
+</Callout>
+
+## Run both routers side by side
+
+The `app/` and `pages/` directories coexist. Ship the migration route by route, behind the same domain, and you never need a long-lived feature branch.
+
+## Watch the caching defaults
+
+The App Router caches aggressively. Be explicit:
+
+```ts title="fetch.ts"
+const res = await fetch(url, { next: { revalidate: 60 } })
+```
+
+## The payoff
+
+After migration we measured a **48% drop in LCP** and removed dozens of client-side loading states. The codebase got smaller, not bigger.

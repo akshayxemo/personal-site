@@ -1,0 +1,48 @@
+---
+title: "Pulse Analytics"
+summary: "A real-time product analytics dashboard with sub-second query latency over billions of events."
+category: "Web App"
+tags: ["Next.js", "Real-time", "Data Viz", "PostgreSQL"]
+stack: ["Next.js", "TypeScript", "PostgreSQL", "ClickHouse", "WebSockets", "Recharts"]
+role: "Senior Full Stack Engineer"
+year: 2024
+featured: true
+order: 2
+status: "Shipped"
+cover: "/projects/pulse-analytics.png"
+links:
+  live: "https://github.com/akshayxemo"
+  repo: "https://github.com/akshayxemo"
+---
+
+Pulse gives product teams a live view of how users move through their apps — funnels, retention, and event streams that update without a refresh.
+
+## The challenge
+
+Analytics dashboards live or die on latency. Teams abandon tools that make them wait. The goal was sub-second interactions over a dataset measured in billions of rows.
+
+## How it works
+
+We split storage by access pattern: transactional metadata in PostgreSQL, and a columnar store (ClickHouse) for the analytical queries.
+
+```sql title="funnel.sql"
+SELECT
+  step,
+  count(DISTINCT user_id) AS users
+FROM events
+WHERE event_name IN ('view', 'signup', 'activate')
+GROUP BY step
+ORDER BY step;
+```
+
+Live tiles subscribe over WebSockets and patch only the deltas, so a busy dashboard never re-fetches its full payload.
+
+<Callout>
+  The biggest win came from pre-aggregating common time buckets. Most dashboards ask the same handful of questions — caching those shapes turned multi-second scans into instant reads.
+</Callout>
+
+## Impact
+
+- p95 query latency under **400ms** on production workloads.
+- Reduced infrastructure cost per query by **60%** versus the legacy pipeline.
+- Powers daily decisions for product, growth, and support teams.

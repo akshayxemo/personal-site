@@ -1,0 +1,41 @@
+---
+title: "Forge CLI"
+summary: "A zero-config scaffolding tool that spins up production-ready TypeScript services in seconds."
+category: "Developer Tooling"
+tags: ["CLI", "TypeScript", "DX", "Open Source"]
+stack: ["TypeScript", "Node.js", "esbuild", "Commander", "Vitest"]
+role: "Creator & Maintainer"
+year: 2023
+featured: true
+order: 3
+status: "Shipped"
+cover: "/projects/forge-cli.png"
+links:
+  repo: "https://github.com/akshayxemo"
+---
+
+Forge is a command-line tool that scaffolds opinionated, batteries-included TypeScript services — linting, testing, CI, and deploy config all wired up from the first commit.
+
+## Why build it
+
+Every new service started with the same hour of boilerplate. Forge encodes those decisions once so teams can focus on the problem they're actually solving.
+
+```bash title="terminal"
+npx forge create payments-service --template grpc
+cd payments-service
+forge dev
+```
+
+## Design principles
+
+- **Zero config to start, full control when needed** — sensible defaults with an escape hatch for everything.
+- **Fast feedback** — builds powered by esbuild keep iteration under a second.
+- **Composable templates** — community templates are first-class, not bolted on.
+
+<Callout type="tip">
+  Forge generates a typed config file rather than JSON, so editors can autocomplete every option and catch invalid combinations before you run anything.
+</Callout>
+
+## Adoption
+
+Forge crossed **2k weekly downloads** and powers the internal service template at two companies I've worked with.
