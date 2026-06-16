@@ -6,7 +6,7 @@ export const siteConfig = {
   tagline: "I build fast, reliable, and accessible web products end to end.",
   description:
     "Senior Full Stack Engineer specializing in TypeScript, React, Next.js, and Node.js. I design and ship production-grade web applications, design systems, and developer tooling.",
-  url: "https://akshaykumardas.dev",
+  url: "https://akshaykumardas.vercel.app",
   location: "Kolkata, West Bengal, India",
   email: "iamakshaykumardas007@gmail.com",
   phone: "+91 9007998706",
