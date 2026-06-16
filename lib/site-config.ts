@@ -1,5 +1,5 @@
 export const siteConfig = {
-  "name": "Akshay Kumari Das",
+  "name": "Akshay Kumar Das",
   "shortName": "Akshay Das",
   "initials": "AD",
   "role": "Senior Full Stack Engineer",
