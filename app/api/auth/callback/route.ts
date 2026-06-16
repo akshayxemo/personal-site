@@ -26,28 +26,22 @@ export async function GET(req: NextRequest) {
 
   console.log("Token data:", tokenData);
 
-  return new NextResponse(
-    `
+  return new NextResponse(`
     <!DOCTYPE html>
     <html>
-      <body>
-        <script>
-          window.opener.postMessage(
-            'authorization:github:success:${JSON.stringify({
-              token: tokenData.access_token,
-              provider: "github"
-            })}',
-            window.location.origin
-          );
-          window.close();
-        </script>
-      </body>
+    <body>
+    <script>
+    window.opener.postMessage(
+    'authorization:github:success:${tokenData.access_token}',
+    '*'
+    );
+    window.close();
+    </script>
+    </body>
     </html>
-    `,
-    {
-      headers: {
+    `, {
+    headers: {
         "Content-Type": "text/html",
-      },
-    }
-  );
+    },
+    });
 }
