@@ -17,23 +17,23 @@ export const metadata: Metadata = {
 const values = [
   {
     icon: Layers,
-    title: "Systems over snippets",
-    body: "I build for the long run — composable architectures, typed contracts, and documentation that lets teams move fast without breaking things.",
+    title: "Build for scale",
+    body: "I focus on clean architecture, maintainable code, and systems that can grow as products evolve.",
   },
   {
     icon: Gauge,
-    title: "Performance is a feature",
-    body: "Speed and reliability are first-class requirements. I treat budgets, Core Web Vitals, and observability as part of the product.",
+    title: "Performance matters",
+    body: "Fast, reliable, and responsive applications create better user experiences and stronger products.",
   },
   {
     icon: Users,
-    title: "Built with people",
-    body: "Great software is a team sport. I mentor, write clearly, and design APIs and interfaces that respect the humans who use them.",
+    title: "Collaborative mindset",
+    body: "Great software comes from teamwork. I value communication, knowledge sharing, and continuous learning.",
   },
   {
     icon: Compass,
-    title: "Pragmatic, not dogmatic",
-    body: "I pick the right tool for the problem, ship iteratively, and optimize for outcomes over ideology.",
+    title: "Always learning",
+    body: "Technology evolves quickly, and I enjoy exploring new tools, frameworks, and engineering practices.",
   },
 ]
 
@@ -78,18 +78,20 @@ export default function AboutPage() {
             <Reveal>
               <div className="prose-content max-w-none space-y-4 text-pretty text-base leading-relaxed text-muted-foreground">
                 <p>
-                  I&apos;m {siteConfig.name}, a {siteConfig.role.toLowerCase()} based in {siteConfig.location}. Over the
-                  past six years I&apos;ve shipped production web applications, design systems, and developer tooling for
-                  startups and established teams alike.
+                  I&apos;m {siteConfig.name}, a {siteConfig.role.toLowerCase()} based in {siteConfig.location}. I build modern web and
+                  mobile applications with a strong focus on usability, scalability, and maintainability.
                 </p>
+
                 <p>
-                  My work sits at the intersection of product and platform. On the frontend, I care about details:
-                  motion, accessibility, and interfaces that feel effortless. On the backend, I build resilient APIs,
-                  thoughtful data models, and the observability that keeps systems healthy at scale.
+                  Currently, I work on healthcare technology products where I contribute across the entire stack using React,
+                  Next.js, Flutter, Node.js, GraphQL, Firebase, and AWS. My work includes designing backend services, integrating
+                  health-data platforms, building mobile experiences, and delivering features used in production environments.
                 </p>
+
                 <p>
-                  I believe the best engineering is invisible — it just works. I&apos;m happiest when I&apos;m reducing
-                  complexity, mentoring teammates, and turning ambiguous problems into shippable, measurable outcomes.
+                  I enjoy solving complex problems, learning new technologies, and turning ideas into reliable products. Whether
+                  it&apos;s creating intuitive user experiences, building APIs, or designing event-driven systems, I&apos;m always
+                  focused on delivering solutions that create real value for users.
                 </p>
               </div>
             </Reveal>

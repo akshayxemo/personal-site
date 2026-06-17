@@ -8,12 +8,12 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute left-1/2 top-[-10rem] h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-primary/15 blur-[120px]" />
+        <div className="absolute left-1/2 -top-40 h-112 w-md -translate-x-1/2 rounded-full bg-primary/15 blur-[120px]" />
       </div>
       <div className="mx-auto max-w-5xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
         <Reveal>
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-muted/40 px-3 py-1 text-sm text-muted-foreground">
-            <span className="size-2 rounded-full bg-primary" aria-hidden="true" />
+            <span className="size-2 rounded-full bg-chart-4" aria-hidden="true" />
             {siteConfig.availability}
           </span>
         </Reveal>

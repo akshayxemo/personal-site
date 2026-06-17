@@ -2,6 +2,7 @@ import { Github, Linkedin, Mail, MapPin } from "lucide-react"
 import Link from "next/link"
 
 import { siteConfig } from "@/lib/site-config"
+// import Image from "next/image"
 
 const socials = [
   { label: "GitHub", href: siteConfig.social.github, icon: Github, external: true },
@@ -16,10 +17,14 @@ export function SiteFooter() {
         <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
           <div className="max-w-sm">
             <Link href="/" className="flex items-center gap-2.5">
-              <span className="flex size-9 items-center justify-center rounded-lg bg-primary font-mono text-sm font-semibold text-primary-foreground">
-                {siteConfig.initials}
-              </span>
-              <span className="text-sm font-semibold tracking-tight">{siteConfig.name}</span>
+              {/* <Image
+                width={36}
+                height={36}
+                src={"/akshay-portrait.png"}
+                alt="AKD"
+                className="rounded-lg border border-primary transition-transform group-hover:scale-105"
+              /> */}
+              <span className="text-md font-semibold tracking-tight">{siteConfig.name}</span>
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{siteConfig.tagline}</p>
             <p className="mt-4 flex items-center gap-2 text-sm text-muted-foreground">

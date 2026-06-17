@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { cn } from "@/lib/utils"
 import { siteConfig } from "@/lib/site-config"
+import Image from "next/image"
 
 function isActive(pathname: string, href: string) {
   if (href === "/") return pathname === "/"
@@ -37,9 +38,13 @@ export function SiteHeader() {
     >
       <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="group flex items-center gap-2.5" aria-label={`${siteConfig.name} home`}>
-          <span className="flex size-9 items-center justify-center rounded-lg bg-primary font-mono text-sm font-semibold text-primary-foreground transition-transform group-hover:scale-105">
-            {siteConfig.initials}
-          </span>
+          <Image
+            width={36}
+            height={36}
+            src={"/akshay-portrait.png"}
+            alt="AKD"
+            className="rounded-lg border border-primary transition-transform group-hover:scale-105"
+          />
           <span className="hidden text-sm font-semibold tracking-tight sm:block">{siteConfig.shortName}</span>
         </Link>
 

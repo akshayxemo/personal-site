@@ -6,29 +6,29 @@ export interface SkillGroup {
 export const skills: SkillGroup[] = [
   {
     category: "Languages",
-    items: ["TypeScript", "JavaScript", "Python", "SQL", "Go", "HTML & CSS"],
+    items: ["TypeScript", "JavaScript", "Dart", "Python", "Java", "HTML & CSS"],
   },
   {
     category: "Frontend",
-    items: ["React", "Next.js", "Tailwind CSS", "Framer Motion", "Radix UI", "Redux"],
+    items: ["React", "Next.js", "Tailwind CSS", "React Query", "Redux", "Chart.js"],
   },
   {
     category: "Backend",
-    items: ["Node.js", "GraphQL", "tRPC", "REST", "gRPC", "Prisma"],
+    items: ["Node.js", "Express.js", "GraphQL", "REST APIs", "Payload CMS", "Firebase RTDB"],
   },
   {
-    category: "Data & Infra",
-    items: ["PostgreSQL", "Redis", "ClickHouse", "Docker", "Kubernetes", "AWS"],
+    category: "Mobile & Cloud",
+    items: ["Flutter", "Bloc", "AWS", "Docker", "CI/CD", "Serverless"],
   },
   {
-    category: "Practices",
-    items: ["Testing", "CI/CD", "Accessibility", "Design Systems", "Observability", "Performance"],
+    category: "Databases & Tools",
+    items: ["MongoDB", "MySQL", "Supabase", "Jest", "Git", "GitHub Actions"],
   },
 ]
 
 export const stats = [
-  { label: "Years of experience", value: "6+" },
-  { label: "Projects shipped", value: "40+" },
-  { label: "Teams mentored", value: "5" },
-  { label: "Open-source repos", value: "20+" },
+  { label: "Years of experience", value: "2+" },
+  { label: "Features shipped", value: "30+" },
+  { label: "Systems built", value: "5+" },
+  { label: "Tech stack expertise", value: "20+" },
 ]

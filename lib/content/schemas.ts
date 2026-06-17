@@ -28,6 +28,8 @@ export const articleFrontmatterSchema = z.object({
   tags: z.array(z.string()).default([]),
   featured: z.boolean().default(false),
   cover: z.string().optional(),
+  externalUrl: z.string().optional(),
+  readingTime: z.string().optional(),
 })
 
 export type ProjectFrontmatter = z.infer<typeof projectFrontmatterSchema>
