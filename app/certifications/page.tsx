@@ -16,8 +16,8 @@ export default function CertificationsPage() {
     <>
       <PageHeader
         eyebrow="Certifications"
-        title="Credentials and continuous learning"
-        description="Industry certifications that back up hands-on experience across cloud, containers, and modern web development."
+        title="Learning and professional development"
+        description="Certifications, coursework, and continuous learning focused on software engineering, cloud technologies, and modern application development."
       />
 
       <Container className="py-16 sm:py-20">

@@ -19,8 +19,8 @@ export default function ExperiencePage() {
     <>
       <PageHeader
         eyebrow="Experience"
-        title="A track record of shipping"
-        description="Six years building products and platforms across SaaS, fintech, and agency work — from individual contributor to engineering lead."
+        title="Building products that impact real users"
+        description="From healthcare web platforms to cross-platform mobile applications, I've contributed to production systems across React, Flutter, Node.js, GraphQL, and AWS."
       />
 
       <Container className="py-16 sm:py-20">

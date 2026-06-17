@@ -109,8 +109,8 @@ export function getAllArticles(): ArticleMeta[] {
   return readMdxFiles(ARTICLES_DIR)
     .map(({ slug, data, content }) => ({
       slug,
-      ...articleFrontmatterSchema.parse(data),
       readingTime: readingTime(content).text,
+      ...articleFrontmatterSchema.parse(data),
       formattedDate: formatDate(data.date as string),
     }))
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())

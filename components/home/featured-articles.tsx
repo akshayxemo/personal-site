@@ -17,7 +17,7 @@ export function FeaturedArticles() {
           <Reveal>
             <div>
               <p className="font-mono text-sm font-medium uppercase tracking-widest text-primary">Writing</p>
-              <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight">Latest articles</h2>
+              <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight">Featured articles</h2>
             </div>
           </Reveal>
           <Reveal delay={0.05}>

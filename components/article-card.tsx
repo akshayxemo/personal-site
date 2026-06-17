@@ -8,7 +8,8 @@ import type { ArticleMeta } from "@/lib/content/schemas"
 export function ArticleCard({ article }: { article: ArticleMeta }) {
   return (
     <Link
-      href={`/articles/${article.slug}`}
+      href={article.externalUrl || `/articles/${article.slug}`}
+      target={article.externalUrl ? "_blank" : undefined}
       className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
     >
       {article.cover ? (
@@ -36,7 +37,7 @@ export function ArticleCard({ article }: { article: ArticleMeta }) {
         </h3>
         <p className="mt-2 line-clamp-2 text-pretty text-sm leading-relaxed text-muted-foreground">{article.summary}</p>
         <div className="mt-4 flex flex-wrap gap-1.5 pt-2">
-          {article.tags.slice(0, 3).map((tag) => (
+          {article.tags.slice(0, 10).map((tag) => (
             <Badge key={tag} variant="secondary" className="font-normal">
               {tag}
             </Badge>
