@@ -58,7 +58,7 @@ export const mdxComponents: MDXComponents = {
   ),
   code: (props: ComponentPropsWithoutRef<"code">) => (
     <code
-      className="rounded bg-muted px-1.5 py-0.5 font-mono text-[0.85em] text-foreground before:content-none after:content-none data-[rehype-pretty-code-figure]:bg-transparent"
+      className="rounded bg-muted px-1.5 py-0.5 font-mono text-[0.85em] text-foreground before:content-none after:content-none data-rehype-pretty-code-figure:bg-transparent"
       {...props}
     />
   ),

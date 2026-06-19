@@ -107,7 +107,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 
       <Container className="py-12 sm:py-16">
         <Reveal>
-          <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl border border-border bg-muted">
+          <div className="relative aspect-video w-full overflow-hidden rounded-xl border border-border bg-muted">
             <Image
               src={meta.cover || "/placeholder.svg"}
               alt={`${meta.title} cover`}
@@ -126,8 +126,6 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 
           <aside className="hidden lg:block">
             <div className="sticky top-24 flex flex-col gap-8">
-              {toc.length > 0 ? <TableOfContents items={toc} /> : null}
-
               <div className="flex flex-col gap-4">
                 {meta.role ? (
                   <div>
@@ -153,6 +151,9 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                   </div>
                 </div>
               </div>
+              
+              {toc.length > 0 ? <TableOfContents items={toc} /> : null}
+
             </div>
           </aside>
         </div>

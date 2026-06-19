@@ -1,0 +1,100 @@
+---
+title: "EnvSpec"
+summary: "Built and published an open-source TypeScript CLI that validates environment variables against schemas, generates configuration templates, infers schemas from existing .env files, and prevents configuration drift across environments."
+category: "Developer Tooling"
+tags:
+  [
+    "TypeScript",
+    "Node.js",
+    "CLI",
+    "Developer Tools",
+    "Configuration Management",
+    "DevOps",
+    "Open Source",
+    "Zod",
+  ]
+stack:
+  [
+    "TypeScript",
+    "Node.js",
+    "Commander.js",
+    "Zod",
+    "npm",
+    "GitHub Actions",
+  ]
+role: "Developer Tools Engineer"
+year: 2025
+featured: true
+order: 3
+status: "Shipped"
+cover: "/projects/cli.png"
+links:
+  live: "https://www.npmjs.com/package/@devakio/envspec"
+  repo: "https://github.com/akshayxemo/envspec"
+---
+
+## Overview
+
+EnvSpec is an open-source CLI tool that introduces schema-driven environment variable management for modern applications.
+
+The tool helps developers validate configuration, generate environment templates, infer schemas from existing projects, and prevent deployment failures caused by missing or incorrectly configured environment variables.
+
+Instead of relying on undocumented `.env` files, EnvSpec provides a version-controlled configuration contract while keeping secrets secure and local.
+
+## Key Features
+
+### Environment Validation
+
+- Validate required environment variables before application startup
+- Enforce type-safe configuration values
+- Support enums, defaults, and validation rules
+- Prevent runtime failures caused by invalid configuration
+
+### Schema-Driven Workflows
+
+- Define environment contracts using JSON schemas
+- Standardize configuration across development, staging, and production
+- Version-control environment requirements
+
+### Environment Generation
+
+- Generate `.env.example` and template files
+- Improve onboarding for new developers
+- Reduce manual configuration effort
+
+### Schema Inference
+
+- Generate schemas from existing `.env` files
+- Accelerate migration of legacy projects
+- Automatically infer supported data types
+
+### Security & Git Protection
+
+- Protect sensitive environment files
+- Update `.gitignore` rules automatically
+- Reduce accidental secret exposure
+
+## Technical Highlights
+
+- Built as a TypeScript CLI package
+- Extensible command architecture using Commander.js
+- Schema validation powered by Zod
+- npm package publishing workflow
+- Automated release and CI/CD support
+
+## My Contributions
+
+- Designed the schema specification
+- Built the CLI architecture and command system
+- Developed the validation engine
+- Implemented schema inference workflows
+- Added git-protection automation
+- Published and maintained the npm package
+
+## Challenges Solved
+
+- Eliminating configuration drift across environments
+- Preventing runtime failures caused by missing variables
+- Simplifying onboarding for new contributors
+- Enforcing configuration consistency in CI/CD pipelines
+- Protecting secrets while maintaining shared configuration contracts

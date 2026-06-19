@@ -9,7 +9,7 @@ export const linkSchema = z.object({
 export const projectFrontmatterSchema = z.object({
   title: z.string(),
   summary: z.string(),
-  category: z.enum(["Web App", "Open Source", "Developer Tooling", "Design System", "API & Backend"]),
+  category: z.enum(["Web App", "Open Source", "Developer Tooling", "Design System", "API & Backend", "Mobile App Development"]),
   tags: z.array(z.string()).default([]),
   stack: z.array(z.string()).default([]),
   role: z.string().optional(),

@@ -13,7 +13,7 @@ export function ArticleCard({ article }: { article: ArticleMeta }) {
       className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
     >
       {article.cover ? (
-        <div className="relative aspect-[16/9] overflow-hidden bg-muted">
+        <div className="relative aspect-video overflow-hidden bg-muted">
           <Image
             src={article.cover || "/placeholder.svg"}
             alt={`${article.title} cover`}
