@@ -1,0 +1,40 @@
+{
+  "$schemaVersion": 1,
+  "vars": {
+    "GITHUB_CLIENT_ID": {
+      "required": true,
+      "desc": "GitHub OAuth Client ID from project settings",
+      "type": "string"
+    },
+    "GITHUB_CLIENT_SECRET": {
+      "required": true,
+      "desc": "GitHub OAuth Client Secret from project settings",
+      "type": "string"
+    },
+    "NEXT_PUBLIC_SITE_URL": {
+      "required": true,
+      "desc": "Next.js Public Site URL (e.g., http://localhost:3000 or your deployed URL)",
+      "type": "string"
+    },
+    "AUTH_SECRET": {
+      "required": true,
+      "desc": "Authentication Secret (generate with: openssl rand -base64 32)",
+      "type": "string"
+    },
+    "GITHUB_USERNAME": {
+      "required": true,
+      "desc": "GitHub Username",
+      "type": "string"
+    },
+    "GITHUB_OWNER": {
+      "required": true,
+      "desc": "GitHub Owner",
+      "type": "string"
+    },
+    "GITHUB_REPO": {
+      "required": true,
+      "desc": "GitHub Repository",
+      "type": "string"
+    }
+  }
+}

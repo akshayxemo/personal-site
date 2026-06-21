@@ -93,6 +93,9 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
+      '@devakio/envspec':
+        specifier: ^0.1.1
+        version: 0.1.1
       '@tailwindcss/postcss':
         specifier: ^4.2.0
         version: 4.2.0
@@ -300,6 +303,11 @@ packages:
 
   '@date-fns/tz@1.4.1':
     resolution: {integrity: sha512-P5LUNhtbj6YfI3iJjw5EL9eUAG6OitD0W3fWQcpQjDRc/QIsL0tRNuO1PcDvPccWL1fSTXXdE1ds+l95DV/OFA==}
+
+  '@devakio/envspec@0.1.1':
+    resolution: {integrity: sha512-edNRmTHKcIBz0LLeWPAf5TD3CvNSF6TXia2TOxd4U1lhuyBtkjuDS/dVop/mMo3jidFtaszLtLqKgzVYQsqAcQ==}
+    engines: {node: '>=18'}
+    hasBin: true
 
   '@dotenvx/dotenvx@1.70.0':
     resolution: {integrity: sha512-vC/rom87ym8HEyVdzZZS6/PYGg1Z5fmozUZ8l6cw1sYAxdL1lEyvE/JbK8cMFQoq3GsR/P1PiQRY+VXMtDN9bw==}
@@ -3151,6 +3159,11 @@ snapshots:
 
   '@date-fns/tz@1.4.1':
     optional: true
+
+  '@devakio/envspec@0.1.1':
+    dependencies:
+      commander: 14.0.3
+      dotenv: 17.4.2
 
   '@dotenvx/dotenvx@1.70.0':
     dependencies:
